@@ -1,0 +1,473 @@
+* {
+    margin: 0;
+    padding: 0;
+}
+
+body {
+    background-color: black;
+}
+
+/* --- BACKGROUND IMAGE ================================================================== */
+.main {
+    background-image: url("img/bg.jpg");
+    height: 700px;
+    background-size: max(1500px, 100vw);
+    background-repeat: no-repeat;
+    background-position: center center;
+    position: relative;
+}
+
+/* rgba(0, 0, 0, 0.6); */
+
+.main .box {
+    background: linear-gradient(rgba(0, 0, 0, 0.8), rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.9));
+    height: 700px;
+    width: 100%;
+    position: absolute;
+    top: 0;
+}
+
+
+/* --- NAVBAR =========================================================================== */
+.navbar {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    height: 90px;
+    box-sizing: border-box;
+    margin: 0 auto;
+}
+
+.navbar img {
+    padding-left: 10px;
+}
+
+.nav-menu {
+    padding-right: 15px;
+}
+
+.nav-menu>.lang,
+.signin-btn {
+    color: white;
+    border-radius: 3px;
+    font-size: 14px;
+    font-weight: bold;
+}
+
+.signin-btn {
+    background-color: red;
+    padding: 7px 15px;
+    border-style: none;
+    cursor: pointer;
+}
+
+.signin-btn:hover {
+    background-color: rgb(161, 0, 0);
+}
+
+select {
+    padding: 6px 15px;
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    background-color: transparent;
+    margin-right: 8px;
+    cursor: pointer;
+}
+
+option {
+    color: black;
+}
+
+
+/* ---- HERO-========================================================================= */
+.hero {
+    color: white;
+    height: calc(100% - 90px);
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    position: relative;
+    z-index: 2;
+    gap: 22px;
+    padding: 4px 20px;
+    box-sizing: border-box;
+    font-family: "Poppins", sans-serif;
+    font-style: normal;
+}
+
+.hero span:nth-child(1) {
+    font-weight: 900;
+    font-size: 52px;
+}
+
+.hero span:nth-child(2) {
+    font-weight: 700;
+    font-size: 22px;
+}
+
+.hero span:nth-child(3) {
+    font-weight: 700;
+    font-size: 18px;
+    text-align: center;
+}
+
+.hero_buttons {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    row-gap: 10px;
+}
+
+
+.hero_buttons>.email,
+.start-btn {
+    color: white;
+    font-weight: bold;
+    border-radius: 3px;
+    padding: 16px 8px;
+}
+
+.email {
+    min-width: 260px;
+    text-align: left;
+    background-color: rgba(0, 0, 0, 0.2);
+    border: 1px solid rgba(255, 255, 255, 0.5);
+    /* width: 68%; */
+    font-size: 18px;
+    flex-basis: calc(30%);
+}
+
+.start-btn {
+    min-width: 170px;
+    /* width: 32%; */
+    font-size: 20px;
+    margin-left: 6px;
+    background-color: red;
+    border-style: none;
+    cursor: pointer;
+    flex-basis: calc(15%);
+}
+
+.start-btn:hover {
+    background-color: rgb(204, 12, 12);
+}
+
+.gap-line {
+    width: 100%;
+    height: 5px;
+    background: linear-gradient(90deg, #491010, #970404, #491010);
+}
+
+/* ---- PLAN SECTION ====================================================================== */
+.section {
+    margin: 10px auto;
+    width: 90%;
+    padding: 25px 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+
+}
+
+.section .heading {
+    margin: 18px 12px;
+    font-size: 26px;
+}
+
+.plans {
+    display: flex;
+    gap: 18px;
+    justify-content: space-around;
+    flex-wrap: wrap;
+}
+
+.plan-box {
+    width: 100%;
+    height: 240px;
+    border-radius: 10px;
+    background-color: #6B1F40;
+    position: relative;
+    z-index: 2;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-evenly;
+}
+
+.plan-box::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 240px;
+    background: linear-gradient(rgba(0, 0, 0, 0.2), rgba(0, 0, 0, 0.7));
+}
+
+.plan-box:hover::after {
+    background: linear-gradient(rgba(0, 0, 0, 0.0), rgba(0, 0, 0, 0.5));
+}
+
+.plans a {
+    text-decoration: none;
+    color: white;
+    display: flex;
+    flex-basis: 20%;
+    min-width: 300px;
+    transition: all 0.3s ease-in-out;
+}
+
+.plans a:hover {
+    transform: scale(1.05);
+    /* transition:  0.3s; */
+}
+
+.plan-h {
+    font-size: 22px;
+    padding: 0 20px;
+}
+
+.plan-p {
+    font-size: 18px;
+    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.649);
+}
+
+.plan-price {
+    font-size: 22px;
+    padding: 0 20px;
+}
+
+/* --- OFFERS SECTION ========================================================================= */
+.offer {
+    color: white;
+    min-width: 300px;
+    height: 240px;
+    border-radius: 10px;
+    /* background-color: #1C1A33; */
+    background: linear-gradient(#1C1A33, #210F19);
+    display: flex;
+    flex-basis: 20%;
+    flex-direction: column;
+    justify-content: space-evenly;
+
+}
+
+.offer-h {
+    font-size: 22px;
+    padding: 0 20px;
+    margin-top: 12px;
+}
+
+.offer-p {
+    margin-top: 12px;
+    font-size: 16px;
+    padding: 0 20px;
+    color: rgba(255, 255, 255, 0.649);
+}
+
+.offer-logo {
+    text-align: right;
+    padding: 0 20px;
+}
+
+.offer-logo svg {
+    padding: 12px 20px 0px 0px;
+}
+
+/* --- DEVICE SECTION ====================================================================== */
+.benifites {
+    margin: 0 auto;
+    padding-bottom: 50px;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    flex-wrap: wrap;
+    background: linear-gradient(#000000, #210f19);
+    width: 100%;
+}
+
+.text-box {
+    padding: 20px 48px;
+}
+
+.text-box h1 {
+    font-size: 40px;
+}
+
+.text-box p {
+    margin-top: 20px;
+    font-size: 20px;
+}
+
+/* .device-container {
+    width: 400px; */
+/* border: 1px solid white;
+
+} */
+
+.device-box {
+    width: 600px;
+    height: 504px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+
+
+.tv-img {
+    position: relative;
+    filter: drop-shadow(0 0px 3px rgba(255, 255, 255, 0.5));
+}
+
+.device-box video {
+    position: absolute;
+    top: 23.57%;
+    left: 19%;
+    width: 62%;
+    height: 45%;
+    object-fit: cover;
+}
+
+.phone {
+    position: absolute;
+    bottom: 10px;
+    left: 45px;
+    filter: drop-shadow(0 0px 3px rgba(255, 255, 255, 0.5));
+}
+
+.tablet {
+    position: absolute;
+    bottom: 10px;
+    right: 40px;
+    filter: drop-shadow(0 0px 3px rgba(255, 255, 255, 0.5));
+}
+
+
+/* --- DROP DOWN CONTENT ========================================================================================== */
+
+.faq-section {
+    background: linear-gradient(#210f19, #000000);
+    width: 100%;
+    margin: 0;
+    padding-bottom: 50px;
+}
+
+.faq-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.faq-section h2 {
+    margin: 18px 0;
+    font-size: 26px;
+}
+
+.faq {
+    width: 70%;
+    background-color: #2D2D2D;
+    margin: 10px 0;
+    font-size: 24px;
+    padding: 28px;
+    display: flex;
+    justify-content: space-between;
+    transition: all 0.2s ease-out;
+    cursor: pointer;
+}
+
+.faq:hover {
+    background-color: #414141;
+
+}
+
+/* --- FOOTER --- ============================================================================== */
+
+.footer {
+    padding: 25px 0;
+    font-family: "Poppins", sans-serif;
+    color: white;
+}
+
+.footer-container {
+    width: 90%;
+    margin: 0 auto;
+    padding-left: 30px;
+}
+
+.contact {
+    margin: 16px 0;
+    font-size: 20px;
+}
+
+.contact a {
+    color: rgba(255, 255, 255, 0.8);
+}
+
+.links-conatiner {
+    margin-top: 20px;
+    padding-bottom: 20px;
+    border-bottom: 1px solid rgba(255, 255, 255, 0.6);
+}
+
+.links-conatiner a {
+    color: rgba(255, 255, 255, 0.8);
+    text-decoration: none;
+}
+
+.links-conatiner a:hover {
+    color: white;
+    text-decoration: underline;
+}
+
+.links-conatiner ul {
+    width: 100%;
+    list-style-type: none;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.quic-link {
+    flex-basis: calc(20% - 10px);
+    padding: 8px;
+    min-width: 220px;
+}
+
+.company {
+    margin: 20px 0;
+    padding: 2px;
+    text-align: center;
+    color: rgba(255, 255, 255, 0.6);
+}
+
+
+@media screen and (max-width:620px) {
+
+
+    .device-box {
+        width: 470px;
+        height: 400px;
+    }
+
+    .hero span:nth-child(1) {
+        font-size: 30px;
+    }
+
+    .hero span:nth-child(2) {
+        font-size: 18px;
+    }
+
+    .hero span:nth-child(3) {
+        font-size: 14px;
+    }
+}
+
+@media screen and (max-width:500px) {
+    .device-box {
+        width: 365px;
+        height: 308px;
+    }
+}
